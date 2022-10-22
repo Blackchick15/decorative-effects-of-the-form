@@ -1,18 +1,36 @@
 .form {
   padding: 20px;
   margin: 20px;
+  width: 600px;
 }
 
 .form-field {
+  position: relative;
   margin-bottom: 20px;
 }
 
-.form-label {}
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  background-color:blue;
+  color: aqua;
+
+  transition: transform 250ms linear;
+}
 
 .form-input {
+  width: 100%;
   margin: 0;
   padding: 10px 20px;
   font: inherit;
   border-radius: 3px;
   border: 1px solid #2a2a2a;
 }
+
+.form-input:focus + .form-label{
+  color: red;
+}
+
+.form-input:focus+
